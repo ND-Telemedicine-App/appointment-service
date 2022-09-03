@@ -17,26 +17,6 @@ public class AppointmentController {
     }
 
 
-    //shows a specific appointment
-    @GetMapping(value = "/{id}")
-    public Appointment viewAppointmentById(@PathVariable Long id){
-        return appointmentService.findById(id);
-    }
-
-
-    //shows all appointments a patient has on record
-    @GetMapping(value = "/{patientId}")
-    public List<Appointment> viewAppointmentOfPatient(@PathVariable Long patientId){
-        return appointmentService.findByPatientId(patientId);
-    }
-
-
-    //shows all appointments a doctor has on record
-    @GetMapping(value = "/{doctorId}")
-    public List<Appointment> viewAppointmentOfDoctor(@PathVariable Long doctorId){
-        return appointmentService.findByDoctorId(doctorId);
-    }
-
 
 
 
