@@ -1,5 +1,7 @@
 package com.team4.appointment_service;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -19,6 +21,7 @@ public class Appointment {
     private Long doctorId;
 
     @Column(name = "appointmentDate")
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date appointmentDate;
 
     @Column(name = "appointmentTime")
