@@ -26,7 +26,8 @@ public class AppointmentService {
     }
 
     public void deleteAppointment(Long appointmentId) {
-        appointmentRepo.delete(findById(appointmentId));
+        appointmentRepo.deleteById(appointmentId);
+    }
 
     public Appointment create(Appointment newAppointment) {
         return appointmentRepo.save(newAppointment);
