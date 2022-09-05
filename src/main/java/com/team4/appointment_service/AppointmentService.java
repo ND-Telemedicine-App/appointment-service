@@ -25,6 +25,9 @@ public class AppointmentService {
         return appointmentRepo.findAppointmentsByDoctorId(doctorId);
     }
 
+    public void deleteAppointment(Long appointmentId) {
+        appointmentRepo.delete(findById(appointmentId));
+
     public Appointment create(Appointment newAppointment) {
         return appointmentRepo.save(newAppointment);
     }
