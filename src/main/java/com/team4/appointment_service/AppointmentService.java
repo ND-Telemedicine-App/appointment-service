@@ -7,25 +7,26 @@ import java.util.List;
 @Service
 public class AppointmentService {
 
+    private final AppointmentRepo appointmentRepo;
 
-    private final AppointmentRepo appointmentRepository;
-
-
-    public AppointmentService(AppointmentRepo appointmentRepository) {
-        this.appointmentRepository = appointmentRepository;
+    public AppointmentService(AppointmentRepo appointmentRepo) {
+        this.appointmentRepo = appointmentRepo;
     }
 
     public Appointment findById(Long id) {
-        return appointmentRepository.findAppointmentById(id);
+        return appointmentRepo.findAppointmentById(id);
     }
 
     public List<Appointment> findByPatientId(Long patientId) {
-        return appointmentRepository.findAppointmentsByPatientId(patientId);
+        return appointmentRepo.findAppointmentsByPatientId(patientId);
     }
 
     public List<Appointment> findByDoctorId(Long doctorId) {
-        return appointmentRepository.findAppointmentsByDoctorId(doctorId);
+        return appointmentRepo.findAppointmentsByDoctorId(doctorId);
     }
 
+    public Appointment create(Appointment newAppointment) {
+        return appointmentRepo.save(newAppointment);
+    }
 }
 

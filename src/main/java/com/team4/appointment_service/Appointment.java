@@ -1,5 +1,6 @@
 package com.team4.appointment_service;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -9,22 +10,23 @@ public class Appointment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column
     private Long id;
 
-    @Column(name = "patientId")
+    @Column
     private Long patientId;
 
-    @Column(name = "doctorId")
+    @Column
     private Long doctorId;
 
-    @Column(name = "appointmentDate")
+    @Column
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date appointmentDate;
 
-    @Column(name = "appointmentTime")
+    @Column
     private String appointmentTime;
 
-    @Column(name = "appointmentDescription")
+    @Column
     private String appointmentDescription;
 
     public Long getId() {
@@ -86,5 +88,4 @@ public class Appointment {
                 ", appointmentDescription='" + appointmentDescription + '\'' +
                 '}';
     }
-
 }

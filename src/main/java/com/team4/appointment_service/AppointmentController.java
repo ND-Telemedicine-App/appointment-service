@@ -9,11 +9,9 @@ public class AppointmentController {
 
     private final AppointmentService appointmentService;
 
-
     public AppointmentController(AppointmentService appointmentService) {
         this.appointmentService = appointmentService;
     }
-
 
     //shows a specific appointment
     @GetMapping(value = "/appointment/{id}")
@@ -35,4 +33,9 @@ public class AppointmentController {
         return appointmentService.findByDoctorId(doctorId);
     }
 
+
+    @PostMapping("/createAppointment")
+    public Appointment createAppointment(@RequestBody Appointment newAppointment) {
+        return appointmentService.create(newAppointment);
+    }
 }
