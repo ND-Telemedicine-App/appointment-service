@@ -29,3 +29,4 @@ public class AppointmentService {
         return appointmentRepo.save(newAppointment);
     }
 }
+

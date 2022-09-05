@@ -1,7 +1,6 @@
 package com.team4.appointment_service;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import javax.persistence.*;
 import java.sql.Date;
 
