@@ -1,8 +1,6 @@
 package com.team4.appointment_service;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,21 +16,21 @@ public class AppointmentController {
 
 
     //shows a specific appointment
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/appointment/{id}")
     public Appointment viewAppointmentById(@PathVariable Long id){
         return appointmentService.findById(id);
     }
 
 
     //shows all appointments a patient has on record
-    @GetMapping(value = "/{patientId}")
+    @GetMapping(value = "/appointment/patient/{patientId}")
     public List<Appointment> viewAppointmentOfPatient(@PathVariable Long patientId){
         return appointmentService.findByPatientId(patientId);
     }
 
 
     //shows all appointments a doctor has on record
-    @GetMapping(value = "/{doctorId}")
+    @GetMapping(value = "/appointment/doctor/{doctorId}")
     public List<Appointment> viewAppointmentOfDoctor(@PathVariable Long doctorId){
         return appointmentService.findByDoctorId(doctorId);
     }
