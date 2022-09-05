@@ -9,6 +9,10 @@ public class AppointmentService {
 
     private final AppointmentRepo appointmentRepo;
 
+    public AppointmentService(AppointmentRepo appointmentRepo) {
+        this.appointmentRepo = appointmentRepo;
+    }
+
     public Appointment findById(Long id) {
         return appointmentRepo.findAppointmentById(id);
     }
@@ -19,10 +23,6 @@ public class AppointmentService {
 
     public List<Appointment> findByDoctorId(Long doctorId) {
         return appointmentRepo.findAppointmentsByDoctorId(doctorId);
-    }
-
-    public AppointmentService(AppointmentRepo appointmentRepo) {
-        this.appointmentRepo = appointmentRepo;
     }
 
     public Appointment create(Appointment newAppointment) {
