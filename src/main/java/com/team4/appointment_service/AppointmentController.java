@@ -33,8 +33,8 @@ public class AppointmentController {
         return appointmentService.findByDoctorId(doctorId);
     }
 
-    @PostMapping("/deleteAppointment")
-    public void deleteAppointment(@RequestBody Long appointmentId) {
+    @DeleteMapping("/delete/{appointmentId}")
+    public void deleteAppointment(@PathVariable Long appointmentId) {
         appointmentService.deleteAppointment(appointmentId);
     }
 }
