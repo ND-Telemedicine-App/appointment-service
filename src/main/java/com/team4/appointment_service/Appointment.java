@@ -20,11 +20,12 @@ public class Appointment {
     private Long doctorId;
 
     @Column
-    @JsonFormat(pattern="dd-MM-yyyy")
-    private Date appointmentDate;
+    @JsonFormat(pattern="dd-MM-yyyy HH:mm")
+    private String startTime;
 
     @Column
-    private String appointmentTime;
+    @JsonFormat(pattern="dd-MM-yyyy HH:mm")
+    private String endTime;
 
     @Column
     private String appointmentDescription;
@@ -53,20 +54,20 @@ public class Appointment {
         this.doctorId = doctorId;
     }
 
-    public Date getAppointmentDate() {
-        return appointmentDate;
+    public String getStartTime() {
+        return startTime;
     }
 
-    public void setAppointmentDate(Date appointmentDate) {
-        this.appointmentDate = appointmentDate;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
 
-    public String getAppointmentTime() {
-        return appointmentTime;
+    public String getEndTime() {
+        return endTime;
     }
 
-    public void setAppointmentTime(String appointmentTime) {
-        this.appointmentTime = appointmentTime;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
     public String getAppointmentDescription() {
@@ -83,8 +84,8 @@ public class Appointment {
                 "id=" + id +
                 ", patientId=" + patientId +
                 ", doctorId=" + doctorId +
-                ", appointmentDate=" + appointmentDate +
-                ", appointmentTime='" + appointmentTime + '\'' +
+                ", startTime='" + startTime + '\'' +
+                ", endTime='" + endTime + '\'' +
                 ", appointmentDescription='" + appointmentDescription + '\'' +
                 '}';
     }
