@@ -1,10 +1,15 @@
 package com.team4.appointment_service;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "appointments")
 public class Appointment {
 
