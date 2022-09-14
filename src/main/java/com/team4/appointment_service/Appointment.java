@@ -27,6 +27,18 @@ public class Appointment {
     @JsonFormat(pattern="dd-MM-yyyy HH:mm")
     private String endTime;
 
+    public Appointment() {
+    }
+
+    public Appointment(Long id, Long patientId, Long doctorId, String startTime, String endTime, String appointmentDescription) {
+        this.id = id;
+        this.patientId = patientId;
+        this.doctorId = doctorId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.appointmentDescription = appointmentDescription;
+    }
+
     @Column
     private String appointmentDescription;
 

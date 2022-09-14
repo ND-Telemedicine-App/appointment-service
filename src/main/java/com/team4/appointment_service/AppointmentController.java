@@ -32,6 +32,7 @@ public class AppointmentController {
     }
 
 
+
     //shows all appointments a doctor has on record
     @GetMapping(value = "/appointment/doctor/{doctorId}")
     public List<Appointment> viewAppointmentOfDoctor(@PathVariable Long doctorId){
