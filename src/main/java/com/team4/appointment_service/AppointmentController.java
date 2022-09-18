@@ -13,6 +13,11 @@ public class AppointmentController {
         this.appointmentService = appointmentService;
     }
 
+    @GetMapping(value = "/appointment/all")
+    public List<Appointment> viewAppointments() {
+        return appointmentService.getAll();
+    }
+
     //shows a specific appointment
     @GetMapping(value = "/appointment/{id}")
     public Appointment viewAppointmentById(@PathVariable Long id){
@@ -25,6 +30,7 @@ public class AppointmentController {
     public List<Appointment> viewAppointmentOfPatient(@PathVariable Long patientId){
         return appointmentService.findByPatientId(patientId);
     }
+
 
 
     //shows all appointments a doctor has on record
