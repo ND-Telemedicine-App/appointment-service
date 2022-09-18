@@ -14,7 +14,7 @@ public class AppointmentController {
     }
 
     @GetMapping(value = "/appointment/all")
-    public List<Appointment> viewAppointmentById() {
+    public List<Appointment> viewAppointments() {
         return appointmentService.getAll();
     }
 
