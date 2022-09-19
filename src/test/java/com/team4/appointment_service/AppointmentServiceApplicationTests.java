@@ -17,6 +17,7 @@ class AppointmentServiceApplicationTests {
     private AppointmentService appointmentService;
 
 //    create 4 appointment objects before all test cases
+    @Test
     @BeforeAll
     void init(){
         Appointment appointment1 = new Appointment(1L, 1L, 3L, "20/09/2022 8.00", "20/09/2022 10.00", "I have a headache");
