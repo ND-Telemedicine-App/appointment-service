@@ -4,8 +4,6 @@ import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 
@@ -18,6 +16,7 @@ class AppointmentServiceApplicationTests {
     @Autowired
     private AppointmentService appointmentService;
 
+//    create 4 appiontment objects before all test cases
     @BeforeAll
     void init(){
         Appointment appointment1 = new Appointment(1L, 1L, 3L, "20/09/2022 8.00", "20/09/2022 10.00", "I have a headache");
@@ -32,6 +31,7 @@ class AppointmentServiceApplicationTests {
     }
 
     @Test
+//    should return the correct appointment with the input Id
     void viewAppointmentById(){
         Appointment expectedAppointment = appointmentService.findById(4L);
         assertEquals(3L, expectedAppointment.getPatientId());
@@ -42,25 +42,30 @@ class AppointmentServiceApplicationTests {
     }
 
     @Test
+//    should return all correct appointments with the input patientId
     void viewAppointmentOfPatient() {
         List<Appointment> appointments = appointmentService.findByPatientId(2L);
         assertThat(appointments.size()).isEqualTo(2);
     }
 
     @Test
+//    should return all correct appointments with the input doctorId
     void viewAppointmentOfDoctor(){
         List<Appointment> appointments = appointmentService.findByDoctorId(4L);
         assertThat(appointments.size()).isEqualTo(3);
     }
 
     @Test
+//    should delete the correct appointment with the Id, after calling the appointment should not exist in the database
     void deleteAppointment() {
         appointmentService.deleteAppointment(1L);
         assertThat(appointmentService.findById(1L)).isNull();
     }
     //
     @Test
+//   the new appointment should be created and add to the database
     void createAppointment() {
-        assertNotNull(appointmentService.findById(2L));
+        appointmentService.create(new Appointment(5L, 1L, 3L, "20/09/2022 8.00", "20/09/2022 10.00", "I have a headache"));
+        assertNotNull(appointmentService.findById(5L));
     }
 }
