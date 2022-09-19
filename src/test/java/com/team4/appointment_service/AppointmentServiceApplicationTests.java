@@ -33,9 +33,6 @@ class AppointmentServiceApplicationTests {
 
     @Test
     void viewAppointmentById(){
-        //        To analog a date format in database
-        DateFormat tempDateFormatter = new SimpleDateFormat("dd-MM-yyyy");
-
         Appointment expectedAppointment = appointmentService.findById(4L);
         assertEquals(3L, expectedAppointment.getPatientId());
         assertEquals(4L, expectedAppointment.getDoctorId());
