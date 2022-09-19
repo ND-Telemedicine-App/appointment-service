@@ -8,8 +8,6 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "appointments")
 public class Appointment {
 
