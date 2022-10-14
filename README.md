@@ -1,22 +1,59 @@
-# Getting Started
+**RMIT SEPT 2021 Major Project Team 4**
 
-### Reference Documentation
+**Members:**
+-Doan Yen Nhi (s3880599)
+-Nguyen Hoang Linh (s3880313)
+-Jack Dean (s3722961)
+-Matthew Rigo (s3840775)
+-Mingkai Wang (s3773115)
 
-For further reference, please consider the following sections:
+**Records**
+Github repository : https://github.com/ND-Telemedicine-App
+jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiMzI5YzNmOWIzODBhNDY1NThhYjAyODczM2NmM2EzNTYiLCJwIjoiaiJ9
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.3/maven-plugin/reference/html/#build-image)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.7.3/reference/htmlsingle/#data.sql.jpa-and-spring-data)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.3/reference/htmlsingle/#web)
+**Code documentation - Release 1.0 Major changes & Features - Date: 5/9/22**
+- Appointment Class
+  > Attributes
+  > Getters and setters
+  > To String method
+- Appointment Controller:
+  > viewAppointmentById API
+  > viewAppointmentOfPatient API
+  > viewAppointmentOfDoctor API
+  > createAppointment API
+  > deleteAppointment API
+- Appointment Service:
+  > findbyId method
+  > findByPatientId method
+  > findByDoctorId method
+- Appointment Repository:
+  > findAppointmentById
+  > findAppointmentsByPatientId
+  > findAppointmentsByDoctorId
 
-### Guides
+**Code documentation - Release 1.1 Major changes & Features - Date: 19/9/22**
+- Appointment Class
+  > Changed attributes of Appointment (Now includes start time and end time)
+- Appointment Controller:
+  > getAll API (Gets all appointments in database)
+- AppointmentServiceApplicationTests:
+  > Created various tests for the APIs
+- All classes:
+  > Debug and code cleanup
+  > Created mock data
 
-The following guides illustrate how to use some features concretely:
+**Code documentation - Release 1.2 Major changes & Features - Date: 6/10/22**
+- AppointmentServiceApplicationTests:
+  > Test for createAppointment
+  > Added comments
+- All classes:
+  > Debug and code cleanup
+  > CI Build and test
 
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+To run this service locally on MySQL:
 
+1. Setup localhost in MySql Workbench
+2. Create new schema nd-telemedicine-app
+3. Go to target/classes/application.properties and Edit "spring.datasource.password" field with your own MySql Password
+4. Run "AppointmentServiceApplication" located: src/main/java/com/team4/appointment_service
+5. If done correctly you can refresh schemas and there should be a new tab
