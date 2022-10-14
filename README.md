@@ -45,7 +45,7 @@ jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boar
 **Code documentation - Release 1.2 Major changes & Features - Date: 6/10/22**
 - AppointmentServiceApplicationTests:
   > Test for createAppointment
-  > Added comments
+  > Added comments for tests
 - All classes:
   > Debug and code cleanup
   > CI Build and test
