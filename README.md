@@ -1,15 +1,15 @@
 **RMIT SEPT 2021 Major Project Team 4**
 
 **Members:**
--Doan Yen Nhi (s3880599)
--Nguyen Hoang Linh (s3880313)
--Jack Dean (s3722961)
--Matthew Rigo (s3840775)
--Mingkai Wang (s3773115)
+- Doan Yen Nhi (s3880599)
+- Nguyen Hoang Linh (s3880313)
+- Jack Dean (s3722961)
+- Matthew Rigo (s3840775)
+- Mingkai Wang (s3773115)
 
 **Records**
-Github repository : https://github.com/ND-Telemedicine-App
-jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiMzI5YzNmOWIzODBhNDY1NThhYjAyODczM2NmM2EzNTYiLCJwIjoiaiJ9
+- Github repository : https://github.com/ND-Telemedicine-App
+- Jira Board : https://septteam4.atlassian.net/jira/software/projects/SEPTT4S/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiMzI5YzNmOWIzODBhNDY1NThhYjAyODczM2NmM2EzNTYiLCJwIjoiaiJ9
 
 **Code documentation - Release 1.0 Major changes & Features - Date: 5/9/22**
 - Appointment Class
